@@ -15,6 +15,9 @@ $(".nav-btns").on("click", function(){
     }
 })
 
-import { tryingThing } from "./scrollAnimation.js"
+import { skillsTrigger } from "./scrollAnimation.js"
+window.addEventListener('load', function(){
+   skillsTrigger("right center", ".bigquote","#quote"); 
 
-tryingThing()
+   skillsTrigger("left center",".gallery-image","#human");
+})
