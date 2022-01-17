@@ -1,0 +1,297 @@
+#attractions {
+    margin-bottom: 64px;
+
+    @include md {
+        background-image: url("../img/attraction/cot-dien.png");
+        background-position: -150px center;
+        background-size: cover;
+        display: grid;
+        grid-template-areas: ". attractions .";
+        margin-bottom: 0;
+        padding: 78px 0;
+    }
+
+    @include lg {
+        background-position: center;
+        grid-template-columns: auto 1000px auto;
+    }
+
+    @include xl {
+        grid-template-columns: auto 1100px auto;
+    }
+
+    >div {
+        background-color: $smoked-blue;
+
+        @include md {
+            background-color: transparent;
+            grid-area: attractions;
+        }
+
+        >div {
+            @include md {
+                display: grid;
+                grid-template-areas: ". attractions-list .";
+                grid-template-columns: auto 90% auto;
+            }
+
+            @include xl {
+                grid-template-columns: 0px auto 0px;
+            }
+
+            ul {
+                display: grid;
+                grid-template-areas: "a1"
+                    "a3"
+                    "a5"
+                    "a6"
+                    "a2"
+                    "a4";
+
+                @include md {
+                    gap: 60px;
+                    grid-area: attractions-list;
+                    grid-template-areas: "a1 a2"
+                        "a3 a4"
+                        "a5 a6";
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @include lg {
+                    gap: 16px;
+                    grid-area: attractions-list;
+                }
+
+                @include xl {
+                    gap: 100px;
+                }
+
+                li {
+                    padding-bottom: 24px;
+
+                    section {
+                        display: grid;
+                        grid-template-areas: ". attractions-content .";
+                        grid-template-columns: 16px auto 16px;
+
+                        @include md {
+                            grid-template-columns: 0px auto 0px;
+                        }
+
+                        >div {
+                            grid-area: attractions-content;
+                        }
+                    }
+                }
+
+                #a1 {
+                    grid-area: a1;
+
+                    h3 {
+                        color: $ocean;
+                        font-family: 'Sora', sans-serif;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+
+                        @include lg {
+                            font-size: rem-calc(23);
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+                }
+
+                #a2 {
+                    grid-area: a2;
+
+                    h3 {
+                        color: $ocean;
+                        font-family: 'Sora', sans-serif;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+
+                        @include lg {
+                            font-size: rem-calc(23);
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+                }
+
+                #a3 {
+                    grid-area: a3;
+
+                    h3 {
+                        color: $ocean;
+                        font-family: 'Sora', sans-serif;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+
+                        @include lg {
+                            font-size: rem-calc(23);
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+                }
+
+                #a4 {
+                    grid-area: a4;
+
+                    h3 {
+                        color: $ocean;
+                        font-family: 'Sora', sans-serif;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+
+                        @include lg {
+                            font-size: rem-calc(23);
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+                }
+
+                #a5 {
+                    grid-area: a5;
+
+                    h3 {
+                        color: $ocean;
+                        font-family: 'Sora', sans-serif;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+
+                        @include lg {
+                            font-size: rem-calc(23);
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+                }
+
+                #a6 {
+                    grid-area: a6;
+
+                    h3 {
+                        color: $ocean;
+                        font-family: 'Sora', sans-serif;
+                        font-size: rem-calc(18);
+                        padding: 10px 0;
+
+                        @include lg {
+                            font-size: rem-calc(23);
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+                }
+            }
+        }
+
+        #attractions-intro {
+            @include md {
+                display: grid;
+                grid-template-areas: ". attraction-intro .";
+                grid-template-columns: 16px auto 16px;
+                padding-bottom: 21px;
+                width: 60%;
+            }
+
+            @include lg {
+                padding-bottom: 40px;
+            }
+
+            @include xl {
+                grid-template-columns: 0 auto 0;
+            }
+
+            >div {
+                @include md {
+                    grid-area: attraction-intro;
+                }
+
+                h1 {
+                    color: $prussian;
+                    font-family: 'Sora', sans-serif;
+                    padding: 30px 0;
+                    text-align: center;
+
+                    @include md {
+                        text-align: left;
+                    }
+
+                    @include lg {
+                        font-size: rem-calc(40);
+                    }
+                }
+
+                p {
+                    display: none;
+
+                    @include md {
+                        color: $rock;
+                        display: contents;
+                        font-weight: 300;
+                        line-height: 24px;
+                    }
+
+                    @include lg {
+                        font-size: rem-calc(17);
+                    }
+
+                    @include xl {
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+#header {
+    background-color: $teal;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    >div {
+        display: grid;
+        grid-template-areas: "logo burger"
+            "nav nav";
+        grid-template-columns: auto 30%;
+
+        @include md {
+            grid-template-columns: 0;
+        }
+
+        #logo-container {
+            display: flex;
+            grid-area: logo;
+            justify-content: flex-end;
+            padding: 15px;
+
+            @include md {
+                display: none;
+            }
+
+            a:link,
+            a:visited {
+                color: $white;
+                font-size: rem-calc(30);
+                font-weight: 600;
+                transition: 0.25s;
+
+                &:hover {
+                    color: $yellow;
+                }
+
+                @include lg {
+                    font-size: rem-calc(36);
+                }
+            }
+        }
+
+        #burger-container {
+            align-items: flex-end;
+            color: $white;
+            display: flex;
+            grid-area: burger;
+            padding: 10px;
+
+            @include md {
+                display: none !important;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: rem-calc(40);
+                margin-left: auto;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+
+        #nav-container {
+            background-color: $egg;
+            color: $ocean;
+            grid-area: nav;
+            padding: 20px 0 10px;
+            text-align: center;
+
+            @include md {
+                background-color: transparent;
+                display: block !important;
+            }
+
+            >div {
+                @include md {
+                    display: grid;
+                    grid-template-areas: "left title right";
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                #left {
+                    @include md {
+                        grid-area: left;
+                        margin-right: -40%;
+                    }
+                }
+
+                #title {
+                    display: none;
+
+                    @include md {
+                        display: flex;
+                        grid-area: title;
+                        justify-content: center;
+                        margin: -6px -10px;
+                    }
+                }
+
+                #right {
+                    @include md {
+                        grid-area: right;
+                        margin-left: -40%;
+                    }
+                }
+            }
+        }
+    }
+}

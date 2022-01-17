@@ -1,0 +1,74 @@
+/* =============
+    Navigation
+============= */
+#nav-container {
+    >div {
+        ul {
+            height: 100%;
+
+            @include md {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                margin-bottom: 20px;
+                text-align: right;
+
+                a:link,
+                a:visited {
+                    color: $asparagus;
+                    font-weight: 500;
+                    padding: 0 20px;
+                    text-decoration: none;
+                    transition: 0.25s;
+
+                    @include md {
+                        color: $white;
+                        font-size: rem-calc(17);
+                    }
+
+                    @include lg {
+                        font-size: rem-calc(21);
+                    }
+
+                    @include xl {
+                        font-size: rem-calc(24);
+                    }
+
+                    &:hover,
+                    &:active {
+                        color: $yellow;
+                    }
+                }
+            }
+
+            li:last-child {
+                border: none;
+            }
+        }
+
+        #left {}
+
+        #title {
+
+            a:link,
+            a:visited {
+                color: $white;
+                font-size: rem-calc(30);
+                font-weight: 600;
+                transition: 0.25s;
+
+                &:hover {
+                    color: $yellow;
+                }
+
+                @include lg {
+                    font-size: rem-calc(36);
+                }
+            }
+        }
+
+        #right {}
+    }
+}

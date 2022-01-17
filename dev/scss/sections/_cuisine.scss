@@ -1,0 +1,228 @@
+#cuisine {
+    padding-bottom: 98px;
+
+    @include md {
+        margin-bottom: 300px;
+    }
+
+    >div {
+        grid-area: cuisine;
+
+        >div {
+            @include md {
+                display: grid;
+                grid-template-areas: ". dishes .";
+                grid-template-columns: 16px auto 16px;
+            }
+
+            @include xl {
+                grid-template-columns: auto 1000px auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-areas: "streetfood coffee";
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 170px;
+
+                @include md {
+                    gap: 12px;
+                    grid-area: dishes;
+                }
+
+                li {
+                    section {
+                        display: grid;
+                        grid-template-areas: ". cuisine-content .";
+                        grid-template-columns: 16px auto 16px;
+
+                        @include md {
+                            grid-template-columns: 0 auto 0;
+                        }
+
+                        >div {
+                            grid-area: cuisine-content;
+
+                            h4 {
+                                color: white;
+                                font-family: 'Sora', sans-serif;
+                                font-size: rem-calc(18);
+                                margin: 6px 0;
+                                text-align: center;
+
+                                @include md {
+                                    color: $ocean;
+                                    text-align: left;
+                                }
+
+                                @include lg {
+                                    font-size: rem-calc(23);
+                                }
+                            }
+
+                            P {
+                                color: $rock;
+                                font-weight: 300;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+
+                #streetfood {
+                    background-image: url("../img/cuisine/cha-ca.jpg");
+                    background-position: right;
+                    background-size: cover;
+
+                    img {
+                        display: none;
+                    }
+
+                    @include md {
+                        background-image: none;
+
+                        img {
+                            display: list-item;
+                        }
+                    }
+
+                    p {
+                        display: none;
+
+                        @include md {
+                            display: list-item;
+                            grid-area: streetfood;
+                        }
+                    }
+
+                    aside {
+                        align-items: flex-end;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        button {
+                            margin-right: 3px;
+                            margin-top: 144px;
+
+                            @include md {
+                                margin-right: 0;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+
+                #coffee {
+                    background-image: url("../img/cuisine/note-coffee.jpg");
+                    background-position: center;
+                    background-size: cover;
+
+                    img {
+                        display: none;
+                    }
+
+                    @include md {
+                        background-image: none;
+
+                        img {
+                            display: list-item;
+                        }
+                    }
+
+                    p {
+                        display: none;
+
+                        @include md {
+                            display: list-item;
+                            grid-area: coffee;
+                        }
+                    }
+
+                    aside {
+                        align-items: flex-end;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        button {
+                            margin-right: 3px;
+                            margin-top: 144px;
+
+                            @include md {
+                                margin-right: 0;
+                                margin-top: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #cuisine-intro {
+            margin-bottom: 15px;
+
+            @include md {
+                align-items: flex-end;
+                background-image: url("../img/cuisine/pun.jpg");
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                height: 300px;
+                margin-bottom: 12px;
+            }
+
+            @include lg {
+                height: 500px;
+            }
+
+            @include xl {
+                display: grid;
+                grid-template-areas: ". intro-content .";
+                grid-template-columns: auto 1000px auto;
+            }
+
+            >div {
+                @include xl {
+                    grid-area: intro-content;
+                }
+
+                h1 {
+                    color: $prussian;
+                    font-family: 'Sora', sans-serif;
+                    padding-bottom: 5px;
+                    text-align: center;
+
+                    @include md {
+                        color: $white;
+                        padding-left: 16px;
+                        text-align: left;
+                    }
+
+                    @include xl {
+                        padding-left: 0;
+                    }
+                }
+
+                p {
+                    color: $rock;
+                    font-weight: 300;
+                    line-height: 24px;
+                    padding: 0 16px;
+
+                    @include md {
+                        color: $white;
+                        width: 300px;
+                    }
+
+                    @include lg {
+                        padding-bottom: 5px;
+                        width: 40%;
+                    }
+
+                    @include xl {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

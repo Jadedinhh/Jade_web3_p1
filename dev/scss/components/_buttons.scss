@@ -1,0 +1,17 @@
+
+.green-button {
+    background-color: $asparagus;
+    border: none;
+    border-radius: 3px;
+    color: $white;
+    font-family: 'Sora', sans-serif;
+    font-size: rem-calc(16);
+    font-weight: 500;
+    padding: 6px;
+
+    &:hover {
+        background-color: $yellow;
+        color: $ocean;
+        cursor: pointer;
+    }
+}

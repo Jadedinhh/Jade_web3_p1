@@ -1,0 +1,207 @@
+#tips {
+    margin-bottom: 64px;
+
+    @include md {
+        display: grid;
+        grid-template-areas: ". tips .";
+        grid-template-columns: auto 600px auto;
+        margin-bottom: 15px;
+        margin-top: -250px;
+    }
+
+    @include lg {
+        grid-template-columns: auto 900px auto;
+        margin-top: -350px;
+    }
+
+    @include xl {
+        grid-template-columns: auto 1000px auto;
+        margin-top: -450px;
+    }
+
+    >div {
+        @include md {
+            grid-area: tips;
+        }
+
+        >div {
+            h1 {
+                color: $prussian;
+                font-family: 'Sora', sans-serif;
+                padding-bottom: 10px;
+                text-align: center;
+
+                @include md {
+                    padding-bottom: 36px;
+                    text-align: left;
+                }
+            }
+        }
+
+        #tip-pic {
+            background-image: url("../img/tips/ham-ca-map.jpg");
+            background-position: center;
+            background-size: cover;
+            display: grid;
+            grid-template-rows: 300px;
+
+            img {
+                display: none;
+            }
+
+            @include md {
+                grid-template-rows: 400px;
+            }
+
+            @include lg {
+                background-image: none;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                img {
+                    display: list-item;
+                    width: 100%;
+                }
+            }
+
+            @include xl {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+
+        ul {
+            margin-top: 30px;
+
+            @include md {
+                display: grid;
+                gap: 50px;
+                grid-template-areas: "when how"
+                    "where restriction";
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include xl {
+                gap: 60px;
+            }
+
+            li {
+                section {
+                    display: grid;
+                    grid-template-areas: ". tips-content .";
+                    grid-template-columns: 16px auto 16px;
+
+                    @include md {
+                        grid-template-columns: 0 auto 0;
+                    }
+
+                    >div {
+                        grid-area: tips-content;
+
+                        h4 {
+                            color: $ocean;
+                            font-family: 'Sora', sans-serif;
+                            font-size: rem-calc(18);
+                            padding-bottom: 9px;
+                            text-align: center;
+
+                            @include md {
+                                text-align: left;
+                            }
+
+                            @include lg {
+                                font-size: rem-calc(23);
+                            }
+                        }
+
+                        p {
+                            color: $rock;
+                            font-weight: 300;
+                            line-height: 24px;
+                            margin-bottom: 25px;
+
+                            @include md {
+                                margin-bottom: 10px;
+                            }
+
+                            @include lg {
+                                font-size: rem-calc(17);
+                                margin-bottom: 25px;
+                            }
+                        }
+
+                        .tipz {
+                            display: none;
+
+                            @include md {
+                                display: flex;
+                                font-family: 'Sora', sans-serif;
+                                font-weight: 100;
+
+                                i {
+                                    color: $smoked-blue;
+                                    font-size: rem-calc(18);
+                                }
+
+                                p {
+                                    font-weight: 100;
+                                    justify-content: center;
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #where {
+                grid-area: where;
+
+                section {
+                    >div {
+                        >div {
+                            display: none;
+
+                            @include md {
+                                display: flex;
+                                font-family: 'Sora', sans-serif;
+                                font-weight: 100;
+
+                                a:link,
+                                a:visited {
+                                    color: $rock;
+                                    font-weight: 100;
+                                    margin-left: 5px;
+                                    transition: 0.25s;
+
+                                    &:hover {
+                                        color: $ocean;
+                                    }
+                                }
+
+                                i {
+                                    color: $smoked-blue;
+                                    font-size: rem-calc(17);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #how {
+                grid-area: how;
+            }
+
+            #when {
+                grid-area: when;
+            }
+
+            #restriction {
+                grid-area: restriction;
+            }
+        }
+    }
+}

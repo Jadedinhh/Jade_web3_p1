@@ -1,0 +1,239 @@
+#human {
+    margin-bottom: 64px;
+
+    @include md {
+        display: grid;
+        grid-template-areas: ". human .";
+        grid-template-columns: auto 600px auto;
+        margin-bottom: 77px;
+    }
+
+    @include lg {
+        grid-template-columns: auto 900px auto;
+    }
+
+    @include xl {
+        grid-template-columns: auto 1000px auto;
+    }
+
+    >div {
+        @include md {
+            grid-area: human;
+        }
+
+        h1 {
+            text-align: center;
+
+            @include md {
+                text-align: left;
+            }
+        }
+
+        >div {
+            @include md {
+                display: grid;
+                gap: 18px;
+                grid-template-areas: "info gallery";
+                grid-template-columns: 50% auto;
+            }
+
+            @include lg {
+                grid-template-columns: 40% auto;
+            }
+
+            @include xl {
+                grid-template-columns: 30% auto;
+            }
+
+            #info {
+                display: grid;
+                grid-template-areas: ". human-content .";
+                grid-template-columns: 16px auto 16px;
+
+                @include md {
+                    grid-area: info;
+                    grid-template-columns: 0 auto 0;
+                }
+
+                >div {
+                    grid-area: human-content;
+
+                    h1 {
+                        color: $prussian;
+                        font-family: 'Sora', sans-serif;
+                        padding: 17px 0;
+
+                        @include md {
+                            font-size: rem-calc(30);
+                            padding: 0;
+                        }
+
+                        @include lg {
+                            font-size: rem-calc(36);
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    p {
+                        color: $rock;
+                        font-weight: 300;
+                        line-height: 24px;
+                        margin-bottom: 5px;
+
+                        @include md {
+                            margin-bottom: 20px;
+                        }
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+
+                    p2 {
+                        display: none;
+
+                        @include md {
+                            color: $rock;
+                            display: contents;
+                            font-weight: 300;
+                            line-height: 24px;
+                        }
+
+                        @include lg {
+                            font-size: rem-calc(17);
+                        }
+                    }
+
+                    >div {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        @include md {
+                            justify-content: left;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            #gallery {
+                ul {
+                    @include md {
+                        grid-area: gallery;
+                    }
+
+                    @include lg {
+                        display: grid;
+                        gap: 7px;
+                        grid-template-areas: "h3 h1"
+                            "h3 h1"
+                            "h2 h1"
+                            "h2 h1"
+                            "h5 h1"
+                            "h5 h4";
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    li {}
+
+                    #h1 {
+                        @include lg {
+                            background-image: url("../img/human/thanh-long.jpg");
+                            background-position: center;
+                            background-size: cover;
+                            display: grid;
+                            grid-area: h1;
+                            grid-template-rows: 400px;
+
+                            img {
+                                display: none;
+                            }
+                        }
+
+                        @include xl {
+                            grid-template-rows: 500px;
+                        }
+                    }
+
+                    #h2 {
+                        display: none;
+
+                        @include lg {
+                            background-image: url("../img/human/kids.jpg");
+                            background-position: center;
+                            background-size: cover;
+                            display: list-item;
+                            grid-area: h2;
+                        }
+                    }
+
+                    #h3 {
+                        display: none;
+
+                        @include lg {
+                            background-image: url("../img/human/ta-hien.jpg");
+                            background-position: center;
+                            background-size: cover;
+                            display: list-item;
+                            grid-area: h3;
+                        }
+                    }
+
+                    #h4 {
+                        display: none;
+
+                        @include lg {
+                            background-image: url("../img/human/got-su-hao.png");
+                            background-position: center;
+                            background-size: cover;
+                            display: grid;
+                            grid-area: h4;
+                            grid-template-rows: 130px;
+                        }
+                    }
+
+                    #h5 {
+                        display: none;
+
+                        @include lg {
+                            background-image: url("../img/human/xich-lo-2.jpg");
+                            background-position: right;
+                            background-size: cover;
+                            display: list-item;
+                            grid-area: h5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .guide {
+            background-color: $ocean;
+            height: 8px;
+            margin-bottom: 21px;
+            margin-left: 20%;
+            margin-top: 5px;
+            width: 60%;
+
+            @include md {
+                height: 15px;
+                margin-bottom: 25px;
+                margin-left: 0px;
+                margin-top: 40px;
+                width: 100%;
+            }
+
+            @include lg {
+                margin-bottom: 50px;
+            }
+
+            @include xl{
+                margin-bottom: 60px;
+            }
+
+            >div {
+                background-position: center;
+            }
+        }
+    }
+}
