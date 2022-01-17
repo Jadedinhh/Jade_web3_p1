@@ -15,7 +15,6 @@ $(".nav-btns").on("click", function(){
     }
 })
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { tryingThing } from "./scrollAnimation.js"
 
-gsap.registerPlugin(ScrollTrigger);
+tryingThing()
