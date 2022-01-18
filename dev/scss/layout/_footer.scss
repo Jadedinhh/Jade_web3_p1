@@ -4,6 +4,7 @@ footer {
     grid-template-areas: ". footer .";
     grid-template-columns: 16px auto 16px;
     padding: 40px 0;
+    
 
     @include md {
         padding: 65px 0;
