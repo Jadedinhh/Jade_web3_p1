@@ -3,7 +3,8 @@ footer {
     display: grid;
     grid-template-areas: ". footer .";
     grid-template-columns: 16px auto 16px;
-    padding: 40px 0;
+    padding: 70px 0;
+   
     
 
     @include md {

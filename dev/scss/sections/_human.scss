@@ -1,5 +1,6 @@
 #human {
     margin-bottom: 64px;
+  
     
     @include md {
         display: grid;
@@ -117,6 +118,10 @@
             }
 
             #gallery {
+
+                // padding-bottom: 50px;
+                // padding-top: 50px;
+
                 ul {
                     @include md {
                         grid-area: gallery;
