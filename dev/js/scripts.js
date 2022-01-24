@@ -1,4 +1,17 @@
-import { Slidefromleft, Slidefromright } from "./scrollAnimation.js"
+import { Slidefromleft, Slidefromright } from "./scrollAnimation.js";
+import { burgerTL } from "./burgerAnimation";
+
+var burgerButton = document.querySelector("#burger");
+
+burgerButton.addEventListener("click", () => (
+    burgerTL.play()
+));
+
+
+
+
+
+
 
 
 window.addEventListener('load', function(){
@@ -18,14 +31,9 @@ window.addEventListener('load', function(){
                 Slidefromright(triggerElement[i], animationElement[i]);
             }
         }
-
-
 //    skillsTrigger("right center", ".bigquote","#quote"); 
 
 //    skillsTrigger("left center",".gallery-image","#human");
-
-
-
 
     });
 
