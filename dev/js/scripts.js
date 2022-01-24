@@ -3,6 +3,8 @@ import { burgerTL } from "./burgerAnimation";
 
 var burgerButton = document.querySelector("#burger");
 
+let canISeeMenu = false;
+
 burgerButton.addEventListener("click", () => (
     burgerTL.play()
 ));
