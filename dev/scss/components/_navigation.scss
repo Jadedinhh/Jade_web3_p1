@@ -11,7 +11,7 @@
      
     >div {
         ul {
-            height: 100%;
+           
 
             @include md {
                 display: flex;
@@ -22,13 +22,13 @@
                 margin-bottom: 20px;
                 text-align: right;
 
-                a:link,
-                a:visited {
+                button{
                     color: $asparagus;
                     font-weight: 500;
                     padding: 0 20px;
                     text-decoration: none;
                     transition: 0.25s;
+                    border: none;
 
                     @include md {
                         color: $white;
@@ -37,6 +37,7 @@
 
                     @include lg {
                         font-size: rem-calc(21);
+                        height: 100%;
                     }
 
                     @include xl {
@@ -48,6 +49,34 @@
                         color: $yellow;
                     }
                 }
+
+                // a:link,
+                // a:visited {
+                //     color: $asparagus;
+                //     font-weight: 500;
+                //     padding: 0 20px;
+                //     text-decoration: none;
+                //     transition: 0.25s;
+
+                //     @include md {
+                //         color: $white;
+                //         font-size: rem-calc(17);
+                //     }
+
+                //     @include lg {
+                //         font-size: rem-calc(21);
+                //         height: 100%;
+                //     }
+
+                //     @include xl {
+                //         font-size: rem-calc(24);
+                //     }
+
+                //     &:hover,
+                //     &:active {
+                //         color: $yellow;
+                //     }
+                // }
             }
 
             li:last-child {

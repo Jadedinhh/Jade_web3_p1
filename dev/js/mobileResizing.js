@@ -8,7 +8,11 @@ import { gsap } from "gsap";
      console.log(menuHeight);
 
     if(document.documentElement.clientWidth <= 1024){
+        console.log("hide");
         gsap.set("#nav-container", {y:-menuHeight});
+    }else{
+        console.log("un-hide");
+        gsap.set("#nav-container",{y:0});
     }
 
 

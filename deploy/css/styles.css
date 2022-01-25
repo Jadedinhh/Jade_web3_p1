@@ -419,9 +419,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-#nav-container > div ul {
-  height: 100%;
-}
 @media (min-width: 768px) {
   #nav-container > div ul {
     display: flex;
@@ -432,36 +429,32 @@ a {
   margin-bottom: 20px;
   text-align: right;
 }
-#nav-container > div ul li a:link,
-#nav-container > div ul li a:visited {
+#nav-container > div ul li button {
   color: #86A873;
   font-weight: 500;
   padding: 0 20px;
   text-decoration: none;
   transition: 0.25s;
+  border: none;
 }
 @media (min-width: 768px) {
-  #nav-container > div ul li a:link,
-#nav-container > div ul li a:visited {
+  #nav-container > div ul li button {
     color: #fff;
     font-size: 1.0625rem;
   }
 }
 @media (min-width: 1024px) {
-  #nav-container > div ul li a:link,
-#nav-container > div ul li a:visited {
+  #nav-container > div ul li button {
     font-size: 1.3125rem;
+    height: 100%;
   }
 }
 @media (min-width: 1200px) {
-  #nav-container > div ul li a:link,
-#nav-container > div ul li a:visited {
+  #nav-container > div ul li button {
     font-size: 1.5rem;
   }
 }
-#nav-container > div ul li a:link:hover, #nav-container > div ul li a:link:active,
-#nav-container > div ul li a:visited:hover,
-#nav-container > div ul li a:visited:active {
+#nav-container > div ul li button:hover, #nav-container > div ul li button:active {
   color: #FFBF00;
 }
 #nav-container > div ul li:last-child {
