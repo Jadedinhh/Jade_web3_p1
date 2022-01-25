@@ -1,6 +1,7 @@
 import { Slidefromleft, Slidefromright } from "./scrollAnimation.js";
 import { burgerTL } from "./burgerAnimation";
 import { displayWindowSize } from "./mobileResizing"
+import { menuAnimator } from "./mobileMenu"
 
 
 var burgerButton = document.querySelector("#burger");
@@ -10,11 +11,14 @@ let canISeeMenu = false;
 burgerButton.addEventListener("click", () =>{
    if(canISeeMenu === false){
      burgerTL.play();
+     menuAnimator.play();
      canISeeMenu = true;
  }else{
      burgerTL.reverse();
+     menuAnimator.play();
      canISeeMenu = false;
- }
+   }
+    
  
 });
    
@@ -49,5 +53,7 @@ window.addEventListener('load', function(){
 //    skillsTrigger("left center",".gallery-image","#human");
 
     });
+
+window.addEventListener("resize", displayWindowSize);
 
 window.addEventListener('load', displayWindowSize);

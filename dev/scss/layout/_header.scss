@@ -62,14 +62,25 @@
                     color: $yellow;
                 }
             }
+
+            #burger{
+                position: absolute;
+                z-index: 1000;
+                height: 40px;
+                width: 40px;
+                border: 1px solid red;
+                // background-color: #fff;
+            }
         }
 
         #nav-container {
             background-color: $egg;
             color: $ocean;
             grid-area: nav;
-            padding: 20px 0 10px;
+            width: 100vw;
+            height: 100vh;
             text-align: center;
+            z-index: 500;
 
             @include md {
                 background-color: transparent;
