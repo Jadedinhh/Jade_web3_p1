@@ -6,7 +6,15 @@ var burgerButton = document.querySelector("#burger");
 let canISeeMenu = false;
 
 burgerButton.addEventListener("click", () => (
-    burgerTL.play()
+   
+
+    if (canIseeMenu === false){
+        burgerTL.play()
+        canISeeMenu = true;
+     }else{
+        burgerTL.reverse();
+        canISeeMenu = false;
+     }
 ));
 
 
