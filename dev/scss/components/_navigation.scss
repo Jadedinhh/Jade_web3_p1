@@ -7,6 +7,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     
 
      
     >div {
@@ -29,10 +30,12 @@
                     text-decoration: none;
                     transition: 0.25s;
                     border: none;
+                    background-color:#EAE2B7;
 
                     @include md {
                         color: $white;
                         font-size: rem-calc(17);
+                        background-color: $teal;
                     }
 
                     @include lg {

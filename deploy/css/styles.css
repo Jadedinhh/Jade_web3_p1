@@ -436,11 +436,13 @@ a {
   text-decoration: none;
   transition: 0.25s;
   border: none;
+  background-color: #EAE2B7;
 }
 @media (min-width: 768px) {
   #nav-container > div ul li button {
     color: #fff;
     font-size: 1.0625rem;
+    background-color: rgba(0, 48, 73, 0.2);
   }
 }
 @media (min-width: 1024px) {
@@ -528,6 +530,7 @@ a {
   display: flex;
   grid-area: burger;
   padding: 10px;
+  position: relative;
 }
 @media (min-width: 768px) {
   #header > div #burger-container {
@@ -547,7 +550,6 @@ a {
   z-index: 1000;
   height: 40px;
   width: 40px;
-  border: 1px solid red;
 }
 #header > div #nav-container {
   background-color: #EAE2B7;
@@ -556,7 +558,7 @@ a {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  z-index: 500;
+  position: fixed;
 }
 @media (min-width: 768px) {
   #header > div #nav-container {
