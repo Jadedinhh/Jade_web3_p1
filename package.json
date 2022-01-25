@@ -8,7 +8,7 @@
   "repository": {},
   "private": true,
   "dependencies": {
-    "gsap": "^3.9.1",
+    "gsap": "file:gsap-bonus.tgz",
     "jquery": "^3.6.0"
   }
 }
