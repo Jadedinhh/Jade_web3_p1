@@ -16,7 +16,7 @@ function openCloseMenu(){
      canISeeMenu = true;
  }else{
      burgerTL.reverse();
-     menuAnimator.play();
+     menuAnimator.reverse();
      canISeeMenu = false;
    } 
 }
