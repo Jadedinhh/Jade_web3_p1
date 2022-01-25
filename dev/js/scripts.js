@@ -35,8 +35,10 @@ for(const button of navButtons){
 
 function checkScrolling(e) {
     const indexValue = [].indexOf.call(navButtons, e.target)
+
+
     if (indexValue != -1){
-        scrollPage(indexValue);
+        scrollPage(indexValue -1);
     }
 }
 
