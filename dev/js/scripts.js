@@ -1,21 +1,24 @@
 import { Slidefromleft, Slidefromright } from "./scrollAnimation.js";
 import { burgerTL } from "./burgerAnimation";
+import { displayWindowSize } from "./mobileResizing"
+
 
 var burgerButton = document.querySelector("#burger");
 
 let canISeeMenu = false;
 
-burgerButton.addEventListener("click", () => (
+burgerButton.addEventListener("click", () =>{
+   if(canISeeMenu === false){
+     burgerTL.play();
+     canISeeMenu = true;
+ }else{
+     burgerTL.reverse();
+     canISeeMenu = false;
+ }
+ 
+});
    
 
-    if (canIseeMenu === false){
-        burgerTL.play()
-        canISeeMenu = true;
-     }else{
-        burgerTL.reverse();
-        canISeeMenu = false;
-     }
-));
 
 
 
@@ -47,3 +50,4 @@ window.addEventListener('load', function(){
 
     });
 
+window.addEventListener('load', displayWindowSize);
