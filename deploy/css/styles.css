@@ -442,7 +442,7 @@ a {
   #nav-container > div ul li button {
     color: #fff;
     font-size: 1.0625rem;
-    background-color: rgba(0, 48, 73, 0.2);
+    background-color: transparent;
   }
 }
 @media (min-width: 1024px) {
@@ -486,10 +486,15 @@ a {
   top: 0;
   width: 100%;
 }
+@media (min-width: 768px) {
+  #header {
+    padding-top: 20px;
+  }
+}
 #header > div {
   display: grid;
   grid-template-areas: "logo burger" "nav nav";
-  grid-template-columns: auto 30%;
+  grid-template-columns: auto 15%;
 }
 @media (min-width: 768px) {
   #header > div {
@@ -497,9 +502,10 @@ a {
   }
 }
 #header > div #logo-container {
+  align-items: center;
   display: flex;
   grid-area: logo;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 15px;
 }
 @media (min-width: 768px) {
@@ -526,7 +532,6 @@ a {
 }
 #header > div #burger-container {
   align-items: flex-end;
-  color: #fff;
   display: flex;
   grid-area: burger;
   padding: 10px;
@@ -553,7 +558,6 @@ a {
 }
 #header > div #nav-container {
   background-color: #EAE2B7;
-  color: #1E555C;
   grid-area: nav;
   width: 100vw;
   height: 100vh;
@@ -562,8 +566,10 @@ a {
 }
 @media (min-width: 768px) {
   #header > div #nav-container {
-    background-color: transparent;
+    background-color: rgba(0, 48, 73, 0.2);
     display: block !important;
+    height: 6%;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {

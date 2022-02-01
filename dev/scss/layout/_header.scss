@@ -5,20 +5,27 @@
     top: 0;
     width: 100%;
 
+    @include md{
+         padding-top: 20px;
+        //  padding-bottom: 20px;
+
+    }
+  
     >div {
         display: grid;
         grid-template-areas: "logo burger"
-            "nav nav";
-        grid-template-columns: auto 30%;
+                               "nav nav";
+        grid-template-columns: auto 15%;
 
         @include md {
             grid-template-columns: 0;
         }
 
         #logo-container {
+            align-items: center;
             display: flex;
             grid-area: logo;
-            justify-content: flex-end;
+            justify-content: flex-start;
             padding: 15px;
 
             @include md {
@@ -44,14 +51,11 @@
 
         #burger-container {
             align-items: flex-end;
-            color: $white;
             display: flex;
             grid-area: burger;
             padding: 10px;
             position: relative;
-            // width: 100vw;
-            // height: 100%;
-            // z-index: 500;
+            
 
 
             @include md {
@@ -80,7 +84,7 @@
 
         #nav-container {
             background-color: $egg;
-            color: $ocean;
+            // color: $ocean;
             grid-area: nav;
             width: 100vw;
             height: 100vh;
@@ -89,9 +93,10 @@
             position: fixed;
 
             @include md {
-                background-color: transparent;
+                background-color: $teal;
                 display: block !important;
-               
+                height: 6%;
+                width: 100%;
             }
 
             >div {

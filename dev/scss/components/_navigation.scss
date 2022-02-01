@@ -17,6 +17,7 @@
             @include md {
                 display: flex;
                 justify-content: center;
+                
             }
 
             li {
@@ -35,7 +36,7 @@
                     @include md {
                         color: $white;
                         font-size: rem-calc(17);
-                        background-color: $teal;
+                        background-color: transparent;
                     }
 
                     @include lg {
@@ -101,6 +102,10 @@
                 &:hover {
                     color: $yellow;
                 }
+
+                // @include md{
+                //     background-color: $teal;
+                // }
 
                 @include lg {
                     font-size: rem-calc(36);

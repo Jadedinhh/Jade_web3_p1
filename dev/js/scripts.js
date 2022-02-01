@@ -27,16 +27,14 @@ burgerButton.addEventListener("click", openCloseMenu);
 let navButtons = document.querySelectorAll(".nav-btns");
 
 for(const button of navButtons){
-    button,addEventListener("click", checkScrolling);
+    button.addEventListener("click", checkScrolling);
+    button.addEventListener("click", openCloseMenu);
 }
-// for ( let i = 0; i < navButtons.length; i++){
-//     navButtons[i].addEventListener("click", openCloseMenu);
-// }
+
 
 function checkScrolling(e) {
     const indexValue = [].indexOf.call(navButtons, e.target)
-
-
+    
     if (indexValue != -1){
         scrollPage(indexValue -1);
     }
