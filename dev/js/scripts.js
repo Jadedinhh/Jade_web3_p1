@@ -59,9 +59,6 @@ window.addEventListener('load', function(){
                 Slidefromright(triggerElement[i], animationElement[i]);
             }
         }
-//    skillsTrigger("right center", ".bigquote","#quote"); 
-
-//    skillsTrigger("left center",".gallery-image","#human");
 
     });
 
