@@ -6,5 +6,5 @@ gsap.registerPlugin(ScrollToPlugin);
 let idArray = ["#glance", "#attractions", "#cuisine","hero", "#quote", "#human", "#tips" ];
 
 export function scrollPage(index){
-    gsap. to (window, {duration: 3, scrollTo:idArray[index]});
+    gsap. to (window, {duration: 2.5, scrollTo:idArray[index]});
 }
