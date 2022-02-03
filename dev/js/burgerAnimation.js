@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import {movePage} from "./pageResize"
 
 const burgerBtn = document.querySelector("#burger-container");
 
@@ -7,17 +8,15 @@ gsap.set(".burger-lines",{transformOrigin:"left center"});
 let isMenuOpen = false;
 let burgerAnimation = gsap.timeline({paused:true});
 
-burgerAnimation.to(".burger-lines",{duration:0.25, y:"+=2"})
+burgerAnimation.to(".burger-lines",{duration:0.25, y:"+=2", fill:"#1E555C"})
 .addPause("backToLines")
 .addLabel("openMenu")
-.to("#top-line",{duration:0.25, rotation:45,y:"+=2"},"cross")
-// .to("#middle-line",{duration:0.25, scale:0, transformOrigin:"center"},"cross")
-.to("#bottom-line",{duration:0.25, rotation:-45,y:"-=2"},"cross")
+.to("#top-line",{duration:0.25, rotation: 360 + 45,y:"-=2.5", fill:"#1E555C"},"cross")
+.to("#bottom-line",{duration:0.25, rotation: -45,y:"+=2.5", fill:"#1E555C"},"cross")
 .addPause()
 .addLabel("closeMenu")
-.to("#top-line",{duration:0.25, rotation:0,y:"-=2"},"uncross")
-// .to("#middle-line",{duration:0.25, scale:1, transformOrigin:"center"},"uncross")
-.to("#bottom-line",{duration:0.25, rotation:0,y:"+=2"},"uncross")
+.to("#top-line",{duration:0.25, rotation:0,y:"+=2.5"},"uncross")
+.to("#bottom-line",{duration:0.25, rotation:0,y:"-=2.5"},"uncross")
 
 export function burgerActions(){
     burgerBtn.addEventListener("mouseenter",() =>{
