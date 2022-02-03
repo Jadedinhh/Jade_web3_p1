@@ -17,7 +17,6 @@ export function movePage(isOpen){
         gsap.set("#hidden",{zIndex:100});
     }else{
         mainTL.reverse();
-        // hiddenMenuTL.reverse();
         gsap.set("#hidden",{zIndex:-1});
 
     }

@@ -39,20 +39,20 @@ export function burgerActions(){
 
     burgerBtn.addEventListener("click",(e) =>{
         console.log("click");
-        // call the resize function
+  
         movePage(isMenuOpen);
         
         if(isMenuOpen === false){
-            // animate the burger into an X
+    
             burgerAnimation.play("openMenu");
-            // add a class to the burger container of selected
             burgerBtn.classList.add("selected");
             isMenuOpen = true;
+
         }else{
             e.preventDefault;
-            // animate the burger into an X
+ 
             burgerAnimation.play("closeMenu");
-            // add a class to the burger container of selected
+ 
             burgerBtn.classList.remove("selected");
             isMenuOpen = false;
         }
