@@ -50,36 +50,42 @@
         }
 
         #burger-container {
-            align-items: flex-end;
-            display: flex;
-            grid-area: burger;
-            padding: 10px;
+            cursor: pointer;
+            width: 30px;
             position: relative;
-            
-
+            height: 20px;
+            margin-left: 16px;
+            grid-area: burger;
 
             @include md {
                 display: none !important;
             }
 
-            i {
-                cursor: pointer;
-                font-size: rem-calc(40);
-                margin-left: auto;
-
-                &:hover {
-                    color: $yellow;
-                }
-            }
-
-            #burger{
+            div{
+               span{
+                width: 100%;
+                background-color: $white;
+                margin-top: 20px;
+                // margin-left: 20px;
+                height: 3px;
                 position: absolute;
-                z-index: 1000;
-                height: 40px;
-                width: 40px;
-                // border: 1px solid red;
-                // background-color: #fff;
+                top:0;
+                right: 0;
+                width: 100%;
+
+                &:nth-child(2){
+                    top: 8px;
+                    width: 100%
+                }
+
+                &:nth-child(3){
+                    top: 16px;
+                    width: 100%
+                }
+            } 
             }
+
+            
         }
 
         #nav-container {

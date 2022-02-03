@@ -531,30 +531,35 @@ a {
   }
 }
 #header > div #burger-container {
-  align-items: flex-end;
-  display: flex;
-  grid-area: burger;
-  padding: 10px;
+  cursor: pointer;
+  width: 30px;
   position: relative;
+  height: 20px;
+  margin-left: 16px;
+  grid-area: burger;
 }
 @media (min-width: 768px) {
   #header > div #burger-container {
     display: none !important;
   }
 }
-#header > div #burger-container i {
-  cursor: pointer;
-  font-size: 2.5rem;
-  margin-left: auto;
-}
-#header > div #burger-container i:hover {
-  color: #FFBF00;
-}
-#header > div #burger-container #burger {
+#header > div #burger-container div span {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+  height: 3px;
   position: absolute;
-  z-index: 1000;
-  height: 40px;
-  width: 40px;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+#header > div #burger-container div span:nth-child(2) {
+  top: 8px;
+  width: 100%;
+}
+#header > div #burger-container div span:nth-child(3) {
+  top: 16px;
+  width: 100%;
 }
 #header > div #nav-container {
   background-color: #EAE2B7;

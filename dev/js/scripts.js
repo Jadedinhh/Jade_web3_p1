@@ -1,34 +1,34 @@
 import { Slidefromleft, Slidefromright } from "./scrollAnimation.js";
-import { burgerTL } from "./burgerAnimation";
+import { burgerActions} from "./burgerAnimation";
 import { displayWindowSize } from "./mobileResizing"
-import { menuAnimator } from "./mobileMenu"
+// import { menuAnimator } from "./mobileMenu"
 import {scrollPage } from "./pageScroll"
 
-var burgerButton = document.querySelector("#burger");
+// var burgerButton = document.querySelector("#burger");
 
-let canISeeMenu = false;
+// let canISeeMenu = false;
 
    
-function openCloseMenu(){
-   if(canISeeMenu === false){
-     burgerTL.play();
-     menuAnimator.play();
-     canISeeMenu = true;
- }else{
-     burgerTL.reverse();
-     menuAnimator.reverse();
-     canISeeMenu = false;
-   } 
-}
+// function openCloseMenu(){
+//    if(canISeeMenu === false){
+//      burgerTL.play();
+//      menuAnimator.play();
+//      canISeeMenu = true;
+//  }else{
+//      burgerTL.reverse();
+//      menuAnimator.reverse();
+//      canISeeMenu = false;
+//    } 
+// }
 
 
-burgerButton.addEventListener("click", openCloseMenu);
+// burgerButton.addEventListener("click", openCloseMenu);
 
 let navButtons = document.querySelectorAll(".nav-btns");
 
 for(const button of navButtons){
     button.addEventListener("click", checkScrolling);
-    button.addEventListener("click", openCloseMenu);
+    // button.addEventListener("click", openCloseMenu);
 }
 
 
@@ -43,6 +43,8 @@ function checkScrolling(e) {
 
 
 window.addEventListener('load', function(){
+
+    burgerActions()
 
 
     let triggerElement = [ "#quote", "#gallery", "#quote", "#gallery"];

@@ -1,22 +1,41 @@
 import { gsap } from "gsap";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-gsap.registerPlugin(DrawSVGPlugin);
 
-gsap.set(".burger-lines",{transformOrigin:"center"});
+const burgerBtn = document.querySelector("#burger-container");
 
-const topTL = new gsap.timeline();
-topTL.to(".burger-lines:nth-child(1)",{duration:0.25, y:"+=8"})
-.to(".burger-lines:nth-child(1)",{duration:0.25, rotation:45,fill:"#1E555C"});
+gsap.set(".burger-lines",{transformOrigin:"left center"});
 
-const bottomTL = new gsap.timeline();
-bottomTL.to(".burger-lines:nth-child(3)",{duration:0.25, y:"-=8"})
-.to(".burger-lines:nth-child(3)",{duration:0.25, rotation:-45,fill:"#1E555C"});
+let isMenuOpen = false;
+let burgerAnimation = gsap.timeline({paused:true});
 
-const middleTL = new gsap.timeline();
-middleTL.to(".burger-lines:nth-child(2)",{duration:0.25, scale:0})
+burgerAnimation.to(".burger-lines",{duration:0.25, scaleX:2})
+.addPause("backToLines")
+.addLabel("openMenu")
+.to("#top-line",{duration:0.25, rotation:-45,y:"-=2"},"cross")
+.to("#middle-line",{duration:0.25, scale:0, transformOrigin:"center"},"cross")
+.to("#bottom-line",{duration:0.25, rotation:45,y:"+=2"},"cross")
+.addPause()
+.addLabel("closeMenu")
+.to("#top-line",{duration:0.25, rotation:0,y:"+=2"},"uncross")
+.to("#middle-line",{duration:0.25, scale:1, transformOrigin:"center"},"uncross")
+.to("#bottom-line",{duration:0.25, rotation:0,y:"-=2"},"uncross")
 
-export const burgerTL = new gsap.timeline({paused:true});
+export function burgerActions(){
+    burgerBtn.addEventListener("mouseenter",() =>{
+        console.log("enter");
+        console.log(burgerBtn.classList.contains("selected"));
 
-burgerTL.add(topTL,"burger")
-    .add(bottomTL,"burger")
-    .add(middleTL,"burger")
+        //check to see if the class of selected is on the burger container, and if so don't allow the mouse enter animation
+        if(!burgerBtn.classList.contains("selected")){
+            burgerAnimation.play();
+        }
+    });
+    
+    burgerBtn.addEventListener("mouseleave",() =>{
+        console.log("leave");
+        //check to see if the class of selected is on the burger container, and if so don't allow the mouse enter animation
+        if(!burgerBtn.classList.contains("selected")){
+            burgerAnimation.reverse("backToLines");
+        }
+    });
+
+}
