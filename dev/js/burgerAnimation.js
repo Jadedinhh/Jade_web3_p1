@@ -4,7 +4,7 @@ const burgerBtn = document.querySelector("#burger-container");
 
 gsap.set(".burger-lines",{transformOrigin:"left center"});
 
-let isMenuOpen = false;
+// let isMenuOpen = false;
 let burgerAnimation = gsap.timeline({paused:true});
 
 burgerAnimation.to(".burger-lines",{duration:0.25, scaleY:2})

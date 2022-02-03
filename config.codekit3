@@ -335,6 +335,14 @@
       "oAP" : "\/dev\/content\/human.html",
       "oF" : 0
     },
+    "\/dev\/content\/main.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/main.html",
+      "oF" : 0
+    },
     "\/dev\/content\/quote.kit" : {
       "cB" : 0,
       "ft" : 2048,
