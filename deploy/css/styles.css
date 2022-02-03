@@ -718,7 +718,7 @@ footer > div #subscribe form button:hover {
   position: absolute;
   padding: 100px 0;
   position: absolute;
-  width: 50%;
+  width: 42.2%;
   left: 0;
   top: 50px;
   z-index: -1;
@@ -729,7 +729,7 @@ footer > div #subscribe form button:hover {
   }
 }
 #hidden > div nav ul li {
-  margin: 20px;
+  margin: 25px;
 }
 #hidden > div nav ul li a:link, #hidden > div nav ul li a:visited {
   text-decoration: none;
