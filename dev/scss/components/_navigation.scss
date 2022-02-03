@@ -54,33 +54,7 @@
                     }
                 }
 
-                // a:link,
-                // a:visited {
-                //     color: $asparagus;
-                //     font-weight: 500;
-                //     padding: 0 20px;
-                //     text-decoration: none;
-                //     transition: 0.25s;
-
-                //     @include md {
-                //         color: $white;
-                //         font-size: rem-calc(17);
-                //     }
-
-                //     @include lg {
-                //         font-size: rem-calc(21);
-                //         height: 100%;
-                //     }
-
-                //     @include xl {
-                //         font-size: rem-calc(24);
-                //     }
-
-                //     &:hover,
-                //     &:active {
-                //         color: $yellow;
-                //     }
-                // }
+                
             }
 
             li:last-child {
@@ -103,9 +77,6 @@
                     color: $yellow;
                 }
 
-                // @include md{
-                //     background-color: $teal;
-                // }
 
                 @include lg {
                     font-size: rem-calc(36);

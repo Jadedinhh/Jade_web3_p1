@@ -493,8 +493,8 @@ a {
 }
 #header > div {
   display: grid;
-  grid-template-areas: "logo burger" "nav nav";
-  grid-template-columns: auto 15%;
+  grid-template-areas: "burger logo" "nav nav";
+  grid-template-columns: auto 30%;
 }
 @media (min-width: 768px) {
   #header > div {
@@ -559,7 +559,7 @@ a {
 #header > div #nav-container {
   background-color: #EAE2B7;
   grid-area: nav;
-  width: 100vw;
+  width: 65vw;
   height: 100vh;
   text-align: center;
   position: fixed;

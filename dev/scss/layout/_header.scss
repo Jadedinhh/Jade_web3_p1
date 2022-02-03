@@ -13,9 +13,9 @@
   
     >div {
         display: grid;
-        grid-template-areas: "logo burger"
+        grid-template-areas: "burger logo"
                                "nav nav";
-        grid-template-columns: auto 15%;
+        grid-template-columns: auto 30%;
 
         @include md {
             grid-template-columns: 0;
@@ -86,7 +86,7 @@
             background-color: $egg;
             // color: $ocean;
             grid-area: nav;
-            width: 100vw;
+            width: 65vw;
             height: 100vh;
             text-align: center;
             // z-index: 815;

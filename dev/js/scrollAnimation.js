@@ -13,8 +13,8 @@ export function Slidefromleft( triggerElement, animationElement){
         scrollTrigger:{
             trigger: triggerElement,
             scrub: true,
-            tonggleActions: "restart none resume none",
-            markers: true
+            tonggleActions: "restart none resume none"
+            // markers: true
         }
     });
 }
@@ -29,8 +29,8 @@ export function Slidefromright( triggerElement, animationElement){
         scrollTrigger:{
             trigger: triggerElement,
             scrub: true,
-            tonggleActions: "restart none resume none",
-            markers: true
+            tonggleActions: "restart none resume none"
+            // markers: true
         }
     });
 }
