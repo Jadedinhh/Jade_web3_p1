@@ -8,10 +8,10 @@ gsap.set(".burger-lines",{transformOrigin:"left center"});
 let isMenuOpen = false;
 let burgerAnimation = gsap.timeline({paused:true});
 
-burgerAnimation.to(".burger-lines",{duration:0.25, y:"+=2", fill:"#1E555C"})
+burgerAnimation.to(".burger-lines",{duration:0.25, y:"+=2"})
 .addPause("backToLines")
 .addLabel("openMenu")
-.to("#top-line",{duration:0.25, rotation: 360 + 45,y:"-=2.5", fill:"#1E555C"},"cross")
+.to("#top-line",{duration:0.25, rotation:45,y:"-=2.5", fill:"#1E555C"},"cross")
 .to("#bottom-line",{duration:0.25, rotation: -45,y:"+=2.5", fill:"#1E555C"},"cross")
 .addPause()
 .addLabel("closeMenu")
@@ -40,7 +40,7 @@ export function burgerActions(){
     burgerBtn.addEventListener("click",(e) =>{
         console.log("click");
         // call the resize function
-        // resizePage(isMenuOpen);
+        movePage(isMenuOpen);
         
         if(isMenuOpen === false){
             // animate the burger into an X

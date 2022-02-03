@@ -2,7 +2,7 @@
 
     background-color: $egg;
     // width: 65vw;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     position: absolute;
     padding: 100px 0;
@@ -10,6 +10,7 @@
     width: 50%;
     left:0;
     top:50px;
+    z-index: -1;
 
    @include md{
        display: none;

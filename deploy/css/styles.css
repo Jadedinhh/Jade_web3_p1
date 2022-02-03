@@ -713,7 +713,7 @@ footer > div #subscribe form button:hover {
 
 #hidden {
   background-color: #EAE2B7;
-  height: 100vh;
+  height: 100%;
   text-align: center;
   position: absolute;
   padding: 100px 0;
@@ -721,6 +721,7 @@ footer > div #subscribe form button:hover {
   width: 50%;
   left: 0;
   top: 50px;
+  z-index: -1;
 }
 @media (min-width: 768px) {
   #hidden {
@@ -757,6 +758,10 @@ footer > div #subscribe form button:hover {
 }
 #hidden > div section ul li a:link:hover, #hidden > div section ul li a:link:active, #hidden > div section ul li a:visited:hover, #hidden > div section ul li a:visited:active {
   color: #FFBF00;
+}
+
+main {
+  background-color: white;
 }
 
 #hero {
