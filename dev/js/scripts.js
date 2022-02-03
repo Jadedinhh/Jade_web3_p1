@@ -6,18 +6,18 @@ import {scrollPage } from "./pageScroll"
 
 var burgerButton = document.querySelector("#burger");
 
-let canISeeMenu = false;
+let burgerClicked = false;
 
    
 function openCloseMenu(){
-   if(canISeeMenu === false){
+   if(burgerClicked === false){
      burgerTL.play();
      menuAnimator.play();
-     canISeeMenu = true;
+     burgerClicked = true;
  }else{
      burgerTL.reverse();
      menuAnimator.reverse();
-     canISeeMenu = false;
+     burgerClicked = false;
    } 
 }
 
@@ -59,12 +59,19 @@ window.addEventListener('load', function(){
                 Slidefromright(triggerElement[i], animationElement[i]);
             }
         }
-//    skillsTrigger("right center", ".bigquote","#quote"); 
 
-//    skillsTrigger("left center",".gallery-image","#human");
 
     });
 
+
+ window.addEventListener("resize", function(){
+        if(burgerClicked === true){
+            console.log("fire");
+            openCloseMenu();
+        }
+    });
+
+    
 window.addEventListener("resize", displayWindowSize);
 
 window.addEventListener('load', displayWindowSize);
