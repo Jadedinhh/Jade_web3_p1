@@ -22,7 +22,7 @@ export function movePage(isOpen){
     }else{
         mainTL.reverse();
         hiddenMenuTL.reverse();
-        // gsap.set("#hidden",{zIndex:-1});
+        gsap.set("#hidden",{zIndex:-100});
         isOpen = false;
 
     }

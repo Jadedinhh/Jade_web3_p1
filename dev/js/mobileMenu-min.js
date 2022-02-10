@@ -1,1 +1,0 @@
-import{gsap}from"gsap";export const menuAnimator=new gsap.timeline({paused:!0});menuAnimator.to("#nav-container",{duration:.5,x:0});

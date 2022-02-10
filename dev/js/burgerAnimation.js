@@ -9,7 +9,7 @@ gsap.set(".burger-lines",{transformOrigin:"left center"});
 let isMenuOpen = false;
 let burgerAnimation = gsap.timeline({paused:true});
 
-burgerAnimation.to("#top-line", {duration:0.1, y:"-=2", stagger:"0"})
+burgerAnimation.to("#top-line", {duration:0.1, y:"-=2"})
 .to("#bottom-line", {duration:0.1, y:"+=2"})
 .addPause("backToLines")
 .addLabel("openMenu")
