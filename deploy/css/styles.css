@@ -717,11 +717,11 @@ footer > div #subscribe form button:hover {
   text-align: center;
   position: absolute;
   padding: 100px 0;
-  position: absolute;
   width: 42.2%;
   left: 0;
   top: 50px;
-  z-index: -1;
+  z-index: -7;
+  position: fixed;
 }
 @media (min-width: 768px) {
   #hidden {
