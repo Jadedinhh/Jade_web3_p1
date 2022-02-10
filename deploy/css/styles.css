@@ -537,6 +537,7 @@ a {
   height: 20px;
   margin-left: 16px;
   grid-area: burger;
+  position: fixed;
 }
 @media (min-width: 768px) {
   #header > div #burger-container {
