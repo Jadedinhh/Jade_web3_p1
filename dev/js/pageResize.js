@@ -12,7 +12,7 @@ let hiddenMenuTL = gsap.timeline({paused:true});
 
 
 export function movePage(isOpen){
-    
+
     console.log("here");
     if (isOpen === false) {
         mainTL.play();
@@ -21,7 +21,7 @@ export function movePage(isOpen){
         isOpen = true;
     }else{
         mainTL.reverse();
-        gsap.set("#hidden",{zIndex:-1});
+        // gsap.set("#hidden",{zIndex:-1});
         isOpen = false;
 
     }

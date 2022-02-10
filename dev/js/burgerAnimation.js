@@ -1,7 +1,5 @@
 import { gsap } from "gsap";
 import {movePage} from "./pageResize";
-// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-// gsap.registerPlugin(DrawSVGPlugin);
 
 
 const burgerBtn = document.querySelector("#burger-container");
@@ -15,8 +13,8 @@ burgerAnimation.to("#top-line", {duration:0.1, y:"-=2", stagger:"0"})
 .to("#bottom-line", {duration:0.1, y:"+=2"})
 .addPause("backToLines")
 .addLabel("openMenu")
-.to("#top-line",{duration:0.25, rotation:45,y:"-=2.5", fill:"#1E555C"},"cross")
-.to("#bottom-line",{duration:0.25, rotation: -45,y:"+=2.5", fill:"#1E555C"},"cross")
+.to("#top-line",{duration:0.25, rotation:45,y:"-=2.5"},"cross")
+.to("#bottom-line",{duration:0.25, rotation: -45,y:"+=2.5"},"cross")
 .addPause()
 .addLabel("closeMenu")
 .to("#top-line",{duration:0.25, rotation:0,y:"+=2.5"},"uncross")
