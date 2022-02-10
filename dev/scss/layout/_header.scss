@@ -51,7 +51,7 @@
 
         #burger-container {
             cursor: pointer;
-            width: 30px;
+            width: 40px;
             position: relative;
             height: 20px;
             margin-left: 16px;
@@ -66,7 +66,6 @@
                 width: 100%;
                 background-color: $white;
                 margin-top: 20px;
-                // margin-left: 20px;
                 height: 3px;
                 position: absolute;
                 top:0;
@@ -77,11 +76,6 @@
                     top: 16px;
                     width: 100%
                 }
-
-                // &:nth-child(3){
-                //     top: 16px;
-                //     width: 100%
-                // }
             } 
             }
 

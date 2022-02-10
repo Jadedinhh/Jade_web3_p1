@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import {movePage} from "./pageResize";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-gsap.registerPlugin(DrawSVGPlugin);
+// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+// gsap.registerPlugin(DrawSVGPlugin);
 
 
 const burgerBtn = document.querySelector("#burger-container");
@@ -11,9 +11,8 @@ gsap.set(".burger-lines",{transformOrigin:"left center"});
 let isMenuOpen = false;
 let burgerAnimation = gsap.timeline({paused:true});
 
-burgerAnimation.to("#top-line", {duration:0.25, y:"-=2"})
-.to("#bottom-line", {duration:0.25, y:"+=2"})
-// (".burger-lines",{duration:0.25, y:"+=2"})
+burgerAnimation.to("#top-line", {duration:0.1, y:"-=2", stagger:"0"})
+.to("#bottom-line", {duration:0.1, y:"+=2"})
 .addPause("backToLines")
 .addLabel("openMenu")
 .to("#top-line",{duration:0.25, rotation:45,y:"-=2.5", fill:"#1E555C"},"cross")
@@ -27,8 +26,6 @@ export function burgerActions(){
     burgerBtn.addEventListener("mouseenter",() =>{
         console.log("enter");
         console.log(burgerBtn.classList.contains("selected"));
-
-        //check to see if the class of selected is on the burger container, and if so don't allow the mouse enter animation
         if(!burgerBtn.classList.contains("selected")){
             burgerAnimation.play();
         }
@@ -36,7 +33,6 @@ export function burgerActions(){
     
     burgerBtn.addEventListener("mouseleave",() =>{
         console.log("leave");
-        //check to see if the class of selected is on the burger container, and if so don't allow the mouse enter animation
         if(!burgerBtn.classList.contains("selected")){
             burgerAnimation.reverse("backToLines");
         }

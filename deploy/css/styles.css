@@ -533,7 +533,7 @@ a {
 }
 #header > div #burger-container {
   cursor: pointer;
-  width: 30px;
+  width: 40px;
   position: relative;
   height: 20px;
   margin-left: 16px;
