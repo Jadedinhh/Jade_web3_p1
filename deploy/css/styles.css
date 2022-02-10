@@ -418,7 +418,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 @media (min-width: 768px) {
   #nav-container > div ul {
@@ -534,7 +533,7 @@ a {
 #header > div #burger-container {
   cursor: pointer;
   width: 40px;
-  position: relative;
+  position: absolute;
   height: 20px;
   margin-left: 16px;
   grid-area: burger;
@@ -550,7 +549,7 @@ a {
   margin-top: 20px;
   height: 3px;
   position: absolute;
-  top: 0;
+  top: 50;
   right: 0;
   width: 100%;
 }
